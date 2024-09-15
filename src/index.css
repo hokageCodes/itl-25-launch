@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url("https://unpkg.com/@webpixels/css@1.1.5/dist/index.css");
+/* Bootstrap Icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css");
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Syne:wght@400..800&display=swap');
+
+/* Tailwind Base */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Syne", sans-serif;
+}
+
+/* Hero Section Text Effect */
+.hero-deco {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;  
+    background: url(./assets/back.webp);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back {
+    100% {
+        background-position: 2000px 0;
+    }
+}
+
+/* Navbar Styles */
+nav {
+    background: transparent;
+    z-index: 50;
+}
+
+/* Hero Section */
+.hero-section {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .logo-img {
+        width: 170px;
+        margin-left: -10px;
+    }
+}

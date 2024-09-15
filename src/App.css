@@ -1,0 +1,25 @@
+/* App.css */
+  
+  footer {
+    margin-top: auto; /* Push footer to the bottom */
+  }
+
+
+  /* App.css or your specific CSS file */
+
+.mySwiper {
+  width: 100%;
+  height: 80vh; /* Adjust as needed */
+}
+
+.swiper-slide-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the slide without distortion */
+}
