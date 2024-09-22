@@ -87,7 +87,7 @@ const SponsorForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-cream px-4 pt-16 md:pt-0">
+    <div className="min-h-screen flex justify-center items-center mt-[-90px] px-4 md:pt-0">
       <div className="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden max-w-4xl w-full mt-16">
         <div className="p-8 space-y-4 md:w-1/2 bg-deepBlue text-cream">
           <h2 className="text-3xl font-black pt-24">Become a Sponsor</h2>
