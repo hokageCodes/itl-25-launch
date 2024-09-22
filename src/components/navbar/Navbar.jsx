@@ -49,7 +49,6 @@ const Navbar = () => {
               <div className="w-32 absolute mt-2 bg-deepBlue text-white border rounded shadow-lg">
                 <a href="/team/leadership" className="block px-4 py-2 text-sm font-bold hover:bg-wine hover:text-white">Leadership Team</a>
                 <a href="/team/planning" className="block px-4 py-2 text-sm font-bold hover:bg-wine hover:text-white">Planning Team</a>
-                <a href="/team/partners" className="block px-4 py-2 text-sm font-bold hover:bg-wine hover:text-white">Partners</a>
               </div>
             )}
           </div>
@@ -86,7 +85,6 @@ const Navbar = () => {
             <div className="pl-4 mt-2">
               <a href="/team/leadership" className="block py-2 text-sm font-bold">Leadership Team</a>
               <a href="/team/planning" className="block py-2 text-sm font-bold">Planning Team</a>
-              <a href="/team/partners" className="block py-2 text-sm font-bold">Partners</a>
             </div>
           )}
         </div>
