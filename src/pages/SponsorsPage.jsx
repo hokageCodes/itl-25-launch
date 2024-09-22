@@ -60,22 +60,7 @@ const SponsorsPage = () => {
                 </div>
               ))}
             </div>
-
-            {/* Horizontal Rule */}
-            {index < Object.keys(sponsorsData).length - 1 && (
-              <hr className="my-12 border-t border-butter" />
-            )}
-          </div>
-        ))}
-
-        {/* Thank You Section */}
-        <div className="text-center mt-16">
-          <p className="text-lg text-darkBrown mb-8">
-            To view our complete package in English and French, click the links below.
-          </p>
-
-          {/* Call-to-Actions */}
-          <div className="flex justify-center space-x-6">
+            <div className="flex justify-center space-x-6 mt-8">
             <a
               href="/assets/english.pdf"
               target="_blank"
@@ -93,6 +78,21 @@ const SponsorsPage = () => {
               Sponsorship Package (French)
             </a>
           </div>
+            {/* Horizontal Rule */}
+            {index < Object.keys(sponsorsData).length - 1 && (
+              <hr className="my-12 border-t border-butter" />
+            )}
+          </div>
+        ))}
+
+        {/* Thank You Section */}
+        <div className="text-center mt-16">
+          <p className="text-lg text-darkBrown mb-8">
+            To view our complete package in English and French, click the links below.
+          </p>
+
+          {/* Call-to-Actions */}
+          
         </div>
       </div>
       <div className="mt-12">
