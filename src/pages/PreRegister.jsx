@@ -1,4 +1,4 @@
-"use client"
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
 import { app } from '../../firebaseConfig';
