@@ -71,7 +71,7 @@ const PlanningTeamSection = () => {
                 <img
                   src={member.img}
                   alt={`${member.name}'s profile`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain" // Ensures the whole image fits without cutting heads
                 />
               </div>
               <div className="details p-6 text-center">
