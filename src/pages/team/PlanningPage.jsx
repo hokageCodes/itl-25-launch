@@ -3,28 +3,44 @@ import { useState } from 'react';
 const PlanningTeamSection = () => {
   const teamMembers = [
     {
-      name: "Alice Johnson",
-      role: "Project Manager",
-      img: "/assets/prof1.webp",
-      description: "Alice ensures that all projects are delivered on time.",
+      name: "Cynthia Okafor",
+      role: "Registration Committee Lead",
+      img: "/assets/planning/comm-lead.png",
     },
     {
-      name: "Bob Lee",
-      role: "Business Analyst",
-      img: "/assets/prof1.webp",
-      description: "Bob analyzes business requirements to guide project goals.",
+      name: "Dayo Ogunyemi",
+      role: "Exhibition Committee Lead",
+      img: "/assets/planning/ex-comm-lead.png",
     },
     {
-      name: "Charlie Davis",
-      role: "Strategy Consultant",
-      img: "/assets/prof1.webp",
-      description: "Charlie provides strategic advice to optimize project outcomes.",
+      name: "Dunni Shodipo",
+      role: "Award Committee Lead",
+      img: "/assets/planning/award-lead.png",
     },
     {
-      name: "Dana Smith",
-      role: "Operations Lead",
-      img: "/assets/prof1.webp",
-      description: "Dana manages operations to ensure smooth project execution.",
+      name: "Hasiya Crown",
+      role: "Publicity Committee Lead",
+      img: "/assets/planning/pub-comm-lead.png",
+    },
+    {
+      name: "Jaanam Mahboobani",
+      role: "Sponsorship Committee Co-Lead",
+      img: "/assets/planning/spons-lead.png",
+    },
+    {
+      name: "Kenny Okunola",
+      role: "Conference Planning Chair",
+      img: "/assets/planning/p-chair.png",
+    },
+    {
+      name: "Lola Williams-Afolabi",
+      role: "Logistics Committee Lead",
+      img: "/assets/planning/logi-comm.png",
+    },
+    {
+      name: "Maria Kim",
+      role: "Sponsorship Committee Co-Lead",
+      img: "/assets/planning/spons-lead.png",
     },
     // Add more team members if needed
   ];
@@ -40,7 +56,7 @@ const PlanningTeamSection = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <section id="planning-team" className="planning-team-area py-20">
+    <section id="planning-team" className="planning-team-area py-32">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-[#7F5283]">
