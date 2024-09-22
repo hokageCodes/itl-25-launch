@@ -43,6 +43,35 @@ const SponsorsPage = () => {
           </p>
         </div>
 
+        {/* PDF Links and Intro Text */}
+        <div className="text-center mb-12">
+          <p className="text-lg text-darkBrown mb-8">
+            To view our complete package in English and French, click the links below.
+          </p>
+
+          <div className="flex justify-center space-x-6">
+            <a
+              href="/assets/english.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-butter text-deepBlue font-semibold py-3 px-6 rounded hover:bg-deepBlue hover:text-white transition duration-300"
+            >
+              Sponsorship Package (English)
+            </a>
+            <a
+              href="/assets/french.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-butter text-deepBlue font-semibold py-3 px-6 rounded hover:bg-deepBlue hover:text-white transition duration-300"
+            >
+              Sponsorship Package (French)
+            </a>
+          </div>
+        </div>
+
+        {/* Horizontal Rule */}
+        <hr className="my-12 border-t border-butter" />
+
         {/* Sponsor Categories */}
         {Object.keys(sponsorsData).map((category, index) => (
           <div key={index} className="mb-12">
@@ -58,28 +87,6 @@ const SponsorsPage = () => {
               ))}
             </div>
 
-            {/* Render PDF Links only for 'Title Sponsor' */}
-            {category === "Title Sponsor" && (
-              <div className="flex justify-center space-x-6 mt-8">
-                <a
-                  href="/assets/english.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-butter text-deepBlue font-semibold py-3 px-6 rounded hover:bg-deepBlue hover:text-white transition duration-300"
-                >
-                  Sponsorship Package (English)
-                </a>
-                <a
-                  href="/assets/french.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-butter text-deepBlue font-semibold py-3 px-6 rounded hover:bg-deepBlue hover:text-white transition duration-300"
-                >
-                  Sponsorship Package (French)
-                </a>
-              </div>
-            )}
-
             {/* Horizontal Rule */}
             {index < Object.keys(sponsorsData).length - 1 && (
               <hr className="my-12 border-t border-butter" />
@@ -87,17 +94,10 @@ const SponsorsPage = () => {
           </div>
         ))}
 
-        {/* Thank You Section */}
-        <div className="text-center mt-16">
-          <p className="text-lg text-darkBrown mb-8">
-            To view our complete package in English and French, click the links below.
-          </p>
+        {/* Sponsor Form */}
+        <div className="mt-12">
+          <SponsorForm />
         </div>
-      </div>
-      
-      {/* Sponsor Form */}
-      <div className="mt-12">
-        <SponsorForm />
       </div>
     </div>
   );

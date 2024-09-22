@@ -199,7 +199,7 @@ const SponsorForm = () => {
                   <option value="Session Sponsor">Session Sponsor</option>
                   <option value="Award Sponsor">Award Sponsor</option>
                   <option value="Exhibition Sponsor">Exhibition Sponsor</option>
-                  <option value="Gala table sponsor">Gala table sponsor</option>
+                  <option value="Gala table sponsor">Gala Table Sponsor</option>
                 </select>
               </div>
 
