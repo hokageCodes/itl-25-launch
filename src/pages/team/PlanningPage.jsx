@@ -63,12 +63,15 @@ const PlanningTeamSection = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {currentMembers.map((member, index) => (
-            <div key={index} className="team-member-card bg-white shadow-md rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
-              <div className="image-wrapper relative h-60">
+            <div
+              key={index}
+              className="team-member-card bg-white shadow-md rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105"
+            >
+              <div className="image-wrapper relative w-full h-60">
                 <img
                   src={member.img}
                   alt={`${member.name}'s profile`}
-                  className="w-full h-full object-cover object-top" // Added object-top to focus on heads
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="details p-6 text-center">
@@ -86,7 +89,11 @@ const PlanningTeamSection = () => {
                   aria-label={`Page ${number + 1}`}
                   key={number + 1}
                   onClick={() => paginate(number + 1)}
-                  className={`px-4 py-2 rounded-lg border ${currentPage === number + 1 ? 'bg-[#3D3C42] text-white' : 'bg-white text-[#3D3C42] border-[#3D3C42]'}`}
+                  className={`px-4 py-2 rounded-lg border ${
+                    currentPage === number + 1
+                      ? "bg-[#3D3C42] text-white"
+                      : "bg-white text-[#3D3C42] border-[#3D3C42]"
+                  }`}
                 >
                   {number + 1}
                 </button>
