@@ -12,6 +12,9 @@ import PlanningPage from './pages/team/PlanningPage';
 import TeamPage from './pages/team/TeamPage';
 import FAQsPage from './pages/FAQsPage';
 import AwardsPage from './pages/AwardsPage';
+import Volunteer from './pages/VolunteersPage';
+import SponsorForm from './components/sponsor-form/SponsorForm';
+import SponsorsPage from './pages/SponsorsPage';
 
 function App() {
   return (
@@ -24,8 +27,11 @@ function App() {
             <Route path="/itl25-conference" element={<ConferencePage />} />
             <Route path="/pre-register" element={<PreRegister />} />
             <Route path="/speakers" element={<SpeakersPage />} />
+            <Route path="/sponsors-form" element={<SponsorForm />} />
+            <Route path="/our-sponsors" element={<SponsorsPage />} />
             <Route path="/faq" element={<FAQsPage />} />
             <Route path="/awards" element={<AwardsPage />} />
+            <Route path="/volunteer" element={<Volunteer />} />
 
             {/* Nested routes for team */}
             <Route path="/team" element={<TeamPage />}>

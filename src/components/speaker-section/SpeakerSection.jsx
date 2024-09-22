@@ -19,9 +19,6 @@ export const MeetOurKeynoteSpeaker = () => {
             <p className="text-darkBrown text-lg mb-6">
             “Watch this space for more details as we unveil the keynote speaker for the ITL Conference 2025
             </p>
-            <p className="text-darkBrown text-lg mb-6">
-              Dont miss his captivating session, filled with innovative insights and real-world applications for lawyers worldwide.
-            </p>
             <a
               href="#register"
               className="bg-wine text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-deepBlue hover:text-cream transition duration-300"

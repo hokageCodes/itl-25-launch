@@ -54,8 +54,7 @@ export const FAQsSection = () => {
             </button>
             {activeIndex === 2 && (
               <p className="mt-4 text-darkBrown text-lg">
-                The conference details will be provided soon. Stay tuned for
-                updates on the date, time, and location of the ITL Conference.
+              The ITL Conference has been scheduled to hold between April 3-5, 2025 in the city of Calgary, Alberta.
               </p>
             )}
           </div>

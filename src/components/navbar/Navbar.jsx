@@ -42,6 +42,7 @@ const Navbar = () => {
           <a href="/itl25-conference" className="font-black">ITL &#39;25 Conference</a>
           <a href="/pre-register" className="font-black">Registration</a>
           <a href="/speakers" className="font-black">Speakers</a>
+          <a href="/our-sponsors" className="font-black">Sponsors</a>
           <div className="relative">
             <button aria-label="Toggle" onClick={toggleDropdown} className="font-black">Team</button>
             {isDropdownOpen && (

@@ -148,7 +148,7 @@ const Hero = () => {
 
           <div className="buttons-container">
             <a href="/pre-register" className="bg-[#FEFBF6] hover:bg-ctaBg hover:text-bg text-wine font-bold py-3 px-6 rounded-lg transition-colors duration-300">Pre-Register Now</a>
-            <a href="/sponsor" className="border border-[#A78295] hover:bg-ctaBg hover:text-bg text-bg font-bold py-3 px-6 rounded-lg transition-colors duration-300">Become a Sponsor</a>
+            <a href="/our-sponsors" className="border border-[#A78295] hover:bg-ctaBg hover:text-bg text-bg font-bold py-3 px-6 rounded-lg transition-colors duration-300">Become a Sponsor</a>
           </div>
         </TextContainer>
       </ContentContainer>
