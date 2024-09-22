@@ -5,7 +5,7 @@ const sponsorsData = {
     { id: 1, logo: '/assets/default.png', name: 'Title Sponsor 1' },
   ],
   "Platinum Sponsor": [
-    { id: 1, logo: '/assets/default.png', name: 'Title Sponsor 1' },
+    { id: 1, logo: '/assets/default.png', name: 'Platinum Sponsor 1' },
   ],
   "Diamond Sponsor": [
     { id: 1, logo: '/assets/gowling.png', name: 'Gowling WLG' },
@@ -15,16 +15,13 @@ const sponsorsData = {
     { id: 2, logo: '/assets/westin.png', name: 'Westin Hotels & Resorts' },
   ],
   "Session Sponsor": [
-    { id: 1, logo: '/assets/default.png', name: 'Title Sponsor 1' },
+    { id: 1, logo: '/assets/default.png', name: 'Session Sponsor 1' },
   ],
-  // "Award Sponsor": [
-  //   { id: 1, logo: '/assets/default.png', name: 'Title Sponsor 1' },
-  // ],
   "Exhibition Sponsor": [
     { id: 1, logo: '/assets/unicalgary.png', name: 'University of Calgary' },
   ],
   "Partners": [
-    { id: 1, logo: '/assets/default.png', name: 'Title Sponsor 1' }, 
+    { id: 1, logo: '/assets/default.png', name: 'Partners Sponsor 1' }, 
   ],
 };
 
@@ -60,24 +57,29 @@ const SponsorsPage = () => {
                 </div>
               ))}
             </div>
-            <div className="flex justify-center space-x-6 mt-8">
-            <a
-              href="/assets/english.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-butter text-deepBlue font-semibold py-3 px-6 rounded hover:bg-deepBlue hover:text-white transition duration-300"
-            >
-              Sponsorship Package (English)
-            </a>
-            <a
-              href="/assets/french.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-butter text-deepBlue font-semibold py-3 px-6 rounded hover:bg-deepBlue hover:text-white transition duration-300"
-            >
-              Sponsorship Package (French)
-            </a>
-          </div>
+
+            {/* Render PDF Links only for 'Title Sponsor' */}
+            {category === "Title Sponsor" && (
+              <div className="flex justify-center space-x-6 mt-8">
+                <a
+                  href="/assets/english.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-butter text-deepBlue font-semibold py-3 px-6 rounded hover:bg-deepBlue hover:text-white transition duration-300"
+                >
+                  Sponsorship Package (English)
+                </a>
+                <a
+                  href="/assets/french.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-butter text-deepBlue font-semibold py-3 px-6 rounded hover:bg-deepBlue hover:text-white transition duration-300"
+                >
+                  Sponsorship Package (French)
+                </a>
+              </div>
+            )}
+
             {/* Horizontal Rule */}
             {index < Object.keys(sponsorsData).length - 1 && (
               <hr className="my-12 border-t border-butter" />
@@ -90,11 +92,10 @@ const SponsorsPage = () => {
           <p className="text-lg text-darkBrown mb-8">
             To view our complete package in English and French, click the links below.
           </p>
-
-          {/* Call-to-Actions */}
-          
         </div>
       </div>
+      
+      {/* Sponsor Form */}
       <div className="mt-12">
         <SponsorForm />
       </div>
