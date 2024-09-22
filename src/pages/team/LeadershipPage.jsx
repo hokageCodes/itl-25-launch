@@ -5,9 +5,9 @@ const LeadershipSection = () => {
     { name: "Kenny Okunola", org: "The ITL Network & Global Lawyers of Canada", img: "/assets/leadership/ken.png"},
     { name: "Cynthia Okafor", org: "The ITL Network", img: "/assets/leadership/cyn.png"},
     { name: "Dayo Ogunyemi", org: "Global Lawyers of Canada", img: "/assets/leadership/dayo.png"},
-    { name: "Funto Omotosho", org: "The ITL Network", img: "/assets/leadership/funto.png"},
-    { name: "Ishita Kashyap", org: "Just One Yes (JOY) ITL Initiative", img: "/assets/leadership/ishita.png"},
     { name: "Michael Tam", org: "ITLNCA NetworkS", img: "/assets/leadership/mike.png"},
+    { name: "Ishita Kashyap", org: "Just One Yes (JOY) ITL Initiative", img: "/assets/leadership/ishita.png"},
+    { name: "Funto Omotosho", org: "The ITL Network", img: "/assets/leadership/funto.png"},
     { name: "Mrunal Masurekar", org: "Just One Yes (JOY) ITL Initiative", img: "/assets/leadership/mru.png"},
     { name: "Rachel Sachs", org: "ITLNCA NetworkS", img: "/assets/leadership/rach.png"},
   ];
@@ -26,7 +26,7 @@ const LeadershipSection = () => {
     <section id="team" className="team-area py-16 mt-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-deepBlue">Our Team</h2>
+          <h2 className="text-3xl font-bold text-deepBlue">Meet Our Leadership Team</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {currentMembers.map((member, index) => (
