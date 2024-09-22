@@ -20,7 +20,7 @@ const PlanningTeamSection = () => {
     {
       name: "Dunni Shodipo",
       role: "Award Committee Lead",
-      img: "/assets/planning/award-lead.png",
+      img: "/assets/planning/1.png",
     },
     {
       name: "Hasiya Crown",
@@ -35,7 +35,7 @@ const PlanningTeamSection = () => {
     {
       name: "Lola Williams-Afolabi",
       role: "Logistics Committee Lead",
-      img: "/assets/planning/1.png",
+      img: "/assets/planning/logi-comm.png",
     },
     {
       name: "Maria Kim",
