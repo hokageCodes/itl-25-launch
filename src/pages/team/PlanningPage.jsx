@@ -5,7 +5,7 @@ const PlanningTeamSection = () => {
     {
       name: "Kenny Okunola",
       role: "Conference Planning Chair",
-      img: "/assets/planning/p-chair.png",
+      img: "/assets/planning/5.png",
     },
     {
       name: "Jaanam Mahboobani",
@@ -35,7 +35,7 @@ const PlanningTeamSection = () => {
     {
       name: "Lola Williams-Afolabi",
       role: "Logistics Committee Lead",
-      img: "/assets/planning/logi-comm.png",
+      img: "/assets/planning/1.png",
     },
     {
       name: "Maria Kim",

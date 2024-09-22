@@ -2,10 +2,14 @@ import { useState } from 'react';
 
 const LeadershipSection = () => {
   const teamMembers = [
-    { name: "John Doe", role: "CEO", img: "/assets/prof1.webp", description: "John Doe is the visionary behind our company." },
-    { name: "Jane Smith", role: "CTO", img: "/assets/prof1.webp", description: "Jane Smith leads our tech team." },
-    { name: "Jim Brown", role: "CFO", img: "/assets/prof1.webp", description: "Jim Brown manages our finances." },
-    { name: "Emily White", role: "COO", img: "/assets/prof1.webp", description: "Emily White oversees our operations." },
+    { name: "Kenny Okunola", org: "The ITL Network & Global Lawyers of Canada", img: "/assets/leadership/ken.png"},
+    { name: "Cynthia Okafor", org: "The ITL Network", img: "/assets/leadership/cyn.png"},
+    { name: "Dayo Ogunyemi", org: "Global Lawyers of Canada", img: "/assets/leadership/dayo.png"},
+    { name: "Funto Omotosho", org: "The ITL Network", img: "/assets/leadership/funto.png"},
+    { name: "Ishita Kashyap", org: "Just One Yes (JOY) ITL Initiative", img: "/assets/leadership/ishita.png"},
+    { name: "Michael Tam", org: "ITLNCA NetworkS", img: "/assets/leadership/mike.png"},
+    { name: "Mrunal Masurekar", org: "Just One Yes (JOY) ITL Initiative", img: "/assets/leadership/mru.png"},
+    { name: "Rachel Sachs", org: "ITLNCA NetworkS", img: "/assets/leadership/rach.png"},
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -23,7 +27,6 @@ const LeadershipSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-deepBlue">Our Team</h2>
-          <h4 className="text-lg text-deepBlue mt-2">Meet our awesome and expert team members</h4>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {currentMembers.map((member, index) => (
@@ -37,7 +40,7 @@ const LeadershipSection = () => {
               </div>
               <div className="info p-6 text-center">
                 <h4 className="text-2xl font-semibold text-deepBlue">{member.name}</h4>
-                <span className="text-lg font-semibold text-wine">{member.role}</span>
+                <span className="text-lg font-semibold text-wine">{member.org}</span>
                 <p className="text-sm mt-2">{member.description}</p>
               </div>
             </div>
