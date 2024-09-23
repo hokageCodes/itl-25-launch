@@ -1,7 +1,9 @@
+import { useState, useEffect } from 'react';
+import hero3 from '../assets/hero3.png';
+import plaque from '../assets/plaque.png'; // Placeholder, you can lazy-load or optimize further
 
-
-  const awards = [
-    {
+const awards = [
+  {
       id: 1,
       title: "Diversity Champion",
       description: "Honoring an individual or organization that has shown outstanding dedication to promoting equity, diversity and inclusion within the legal profession, particularly in supporting internationally trained lawyers. This can also be awarded to a law firm that has demonstrated outstanding commitment to diversity and inclusion, particularly in supporting and advancing the careers of internationally trained lawyers within their organization.",
@@ -61,40 +63,102 @@
       description: "This is the flagship award of the year. This award recognizes an outstanding ITL who has shown exemplary leadership, advocacy, and dedication to advancing the interests and rights of internationally trained lawyers within the Canadian legal profession. This ITL would have displayed exceptional mentorship qualities and be a model and exemplary ITL in the Canadian Legal community.",
       icon: "/assets/plaque.png", // Placeholder path, replace with actual path to icon
     },
-  ];
+];
 
-const AwardsPage = () => {
-  return (
-    <section className="py-32 bg-gray-100" id="awards">
-      <div className="container mx-auto px-6">
-        <h2 className="text-deepBlue text-4xl font-bold text-center mb-8">
-          Awards & Recognitions
-        </h2>
-        <p className="text-darkBrown text-center text-lg mb-12">
-          Celebrate the exceptional achievements with our awards listed in chronological order.
-        </p>
 
-        <div className="relative">
-          {awards.map((award, index) => (
-            <div key={award.id} className={`mb-12 ${index % 2 === 0 ? 'text-left' : 'text-right'}`}>
-              <div className={`flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                <div className="w-1/3">
-                  <img src={award.icon} alt={`${award.title} icon`} className="w-24 h-24 object-cover mb-4 mx-auto" />
+const AwardsSection = () => {
+    const [expandedIds, setExpandedIds] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
+
+        return () => clearTimeout(timeout);
+    }, []);
+
+    const toggleExpand = (id) => {
+        setExpandedIds((prev) =>
+            prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+        );
+    };
+
+    return (
+        <div className="mt-24">
+            {/* Hero Section */}
+            <div
+                className="h-96 flex justify-center items-center bg-cover bg-center"
+                style={{ backgroundImage: `url(${hero3})` }}
+            ></div>
+
+            {/* Awards Content */}
+            <div className="px-6 py-12 text-gray-800">
+                <h2 className="text-3xl text-textPrimary font-extrabold text-center mb-8">
+                    The ITL Conference &#39;25 Awards
+                </h2>
+                <p className="text-center mb-4">
+                    At the upcoming ITL Conference, we will be recognizing the remarkable achievements and
+                    contributions of internationally trained lawyers (ITLs) and the stakeholders, community
+                    partners and law firms that support them.
+                </p>
+                <p className="text-center">
+                    We invite ITLs, law firms, and legal professionals across Canada to participate in this prestigious
+                    recognition of talent and dedication. Below are the award categories designed to honor outstanding
+                    individuals, organizations, and initiatives that have made a significant impact on the Canadian
+                    legal landscape.
+                </p>
+
+                {/* Awards Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-5">
+                    {isLoading ? (
+                        <div className="col-span-full flex justify-center items-center">
+                            <div className="loader">Loading...</div>
+                        </div>
+                    ) : (
+                        awards.map((award) => (
+                            <div
+                                key={award.id}
+                                className="bg-[#FEFBF6] text-[#331D2C] p-6 rounded-lg shadow-lg flex flex-col items-center"
+                            >
+                                <img
+                                    src={award.icon}
+                                    alt={award.title}
+                                    className="w-20 h-20"
+                                    loading="lazy"
+                                />
+                                <h4 className="mt-4 text-textPrimary font-black text-md text-center">
+                                    {award.title}
+                                </h4>
+                                <p className="mt-2 text-center">
+                                    {expandedIds.includes(award.id)
+                                        ? award.description
+                                        : `${award.description.slice(0, 100)}...`}
+                                </p>
+                                <button
+                                    onClick={() => toggleExpand(award.id)}
+                                    className="text-textPrimary font-bold underline cursor-pointer mt-2 focus:outline-none transition duration-200"
+                                    aria-expanded={expandedIds.includes(award.id)}
+                                >
+                                    {expandedIds.includes(award.id) ? 'Read Less' : 'Read More'}
+                                </button>
+                            </div>
+                        ))
+                    )}
                 </div>
-                <div className="w-2/3 bg-white shadow-lg rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-deepBlue mb-2">{award.title}</h3>
-                  <p className="text-darkBrown text-base">{award.description}</p>
+
+                {/* Nomination Button */}
+                <div className="text-center mt-12">
+                    <a
+                        href="/nominate"
+                        className="inline-block bg-wine text-white font-bold py-3 px-8 rounded hover:bg-deepBlue transition-colors duration-300"
+                    >
+                        Click here to nominate
+                    </a>
                 </div>
-              </div>
-              {index < awards.length - 1 && (
-                <div className="absolute top-1/2 transform -translate-y-1/2 bg-gray-300 h-1 w-1 rounded-full left-1/2" style={{ left: `${index % 2 === 0 ? 'calc(33% + 1rem)' : 'calc(67% - 1rem)'}` }}></div>
-              )}
             </div>
-          ))}
         </div>
-      </div>
-    </section>
-  );
+    );
 };
 
-export default AwardsPage;
+export default AwardsSection;

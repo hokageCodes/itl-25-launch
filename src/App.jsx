@@ -15,6 +15,7 @@ import AwardsPage from './pages/AwardsPage';
 import Volunteer from './pages/VolunteersPage';
 import SponsorForm from './components/sponsor-form/SponsorForm';
 import SponsorsPage from './pages/SponsorsPage';
+import MultiStepForm from './pages/NominationPage';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/faq" element={<FAQsPage />} />
             <Route path="/awards" element={<AwardsPage />} />
             <Route path="/volunteer" element={<Volunteer />} />
+            <Route path="/nominate" element={<MultiStepForm />} />
 
             {/* Nested routes for team */}
             <Route path="/team" element={<TeamPage />}>
