@@ -35,7 +35,7 @@ export const MeetOurKeynoteSpeaker = () => {
             href="#register"
             className="bg-wine text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-deepBlue hover:text-cream transition duration-300"
           >
-            Register Now
+            See all Speakers
           </a>
         </motion.div>
       </div>

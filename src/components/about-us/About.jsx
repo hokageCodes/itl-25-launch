@@ -33,14 +33,14 @@ const AboutSection = () => {
               </h2>
 
               <p className="text-md text-darkBrown lg:text-lg">
-              The ITL Conference is the largest gathering of Internationally Trained Lawyers (ITLs) in Canada. The Conference will feature different legal professionals, regulators, change makers, and other stakeholders committed to supporting ITLs in their legal practice journey in Canada. The ITL Conference is a joint effort of our partner organisations: The ITL Network, Global Lawyers of Canada, Joy ITL Initiative and ITL NCA Networks.
+              The ITL Conference is the largest gathering of Internationally Trained Lawyers (ITLs) in Canada. The Conference taking place at The Westin Calgary, will feature different legal professionals, regulators, change makers, and other stakeholders committed to supporting ITLs in their legal practice journey in Canada. The ITL Conference is a joint effort of our partner organizations: The ITL Network, Global Lawyers of Canada, Joy ITL Initiative and ITL NCA NetworkS.
               </p>
               <div>
                 <button
                   aria-label="Submit"
                   className="bg-wine text-white hover:bg-wine hover:text-cream rounded-md px-6 py-3 transition duration-300 ease-in-out"
                 >
-                  <a href="/pre-register">Pre Register</a>
+                  <a href="/pre-register">Register</a>
                 </button>
               </div>
             </div>

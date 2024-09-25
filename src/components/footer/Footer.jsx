@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="p-5">
           <div className="text-sm uppercase font-bold text-white">Quick Links</div>
           <a className="my-3 block text-white hover:text-cream" href="/">Home</a>
-          <a className="my-3 block text-white hover:text-cream" href="/itl25-conference">About</a>
+          <a className="my-3 block text-white hover:text-cream" href="/team/leadership">Team</a>
           <a className="my-3 block text-white hover:text-cream" href="/speakers">Speakers</a>
           <a className="my-3 block text-white hover:text-cream" href="/itl25-conference">Schedule</a>
         </div>
@@ -24,8 +24,7 @@ const Footer = () => {
         </div>
         <div className="p-5">
           <div className="text-sm uppercase font-bold text-white">Contact Us</div>
-          <a className="my-3 block text-white hover:text-cream" href="#">Canada</a>
-          <a className="my-3 block text-white hover:text-cream" href="mailto:theitlnetwork@gmail.com">theitlnetwork@gmail.com</a>
+          <a className="my-3 block text-white hover:text-cream" href="mailto:theitlnetwork@gmail.com">info@itlconference.ca</a>
         </div>
       </div>
 

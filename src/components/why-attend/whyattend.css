@@ -21,6 +21,10 @@
     padding: 2rem;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .card:hover {
@@ -31,7 +35,9 @@
     color: #50223C;
     font-size: 2rem;
     margin-bottom: 1rem;
+    display: block;
   }
+  
   
   .card h3 {
     color: #1C2340;

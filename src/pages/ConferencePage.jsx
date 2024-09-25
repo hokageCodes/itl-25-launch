@@ -8,7 +8,7 @@ import AboutSection from '../components/about-us/About';
 import PartnersSection from '../components/partners/PartnersSection';
 import Schedule from '../components/schedule-section/Schedule';
 import hero1 from '/assets/hero1.png';
-import hero2 from '/assets/hero2.png';
+import hero2 from '/assets/conn.png';
 import hero3 from '/assets/hero3.png';
 
 export default function ConferencePage() {

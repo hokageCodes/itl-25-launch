@@ -48,7 +48,7 @@ export const FAQsSection = () => {
             </button>
             {activeIndex === 2 && (
               <p className="mt-4 text-darkBrown text-lg">
-              The ITL Conference has been scheduled to hold between April 3-5, 2025 in the city of Calgary, Alberta.
+              The ITL Conference has been scheduled to hold between April 4-5, 2025 in the city of Calgary, Alberta.
               </p>
             )}
           </div>

@@ -25,8 +25,10 @@ const LeadershipSection = () => {
   return (
     <section id="team" className="team-area py-16 mt-16">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-deepBlue">Meet Our Leadership Team</h2>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-[#7F5283]">
+            Meet Our <span className="text-[#3D3C42]">Leadership Team</span>
+          </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {currentMembers.map((member, index) => (

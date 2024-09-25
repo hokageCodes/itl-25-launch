@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import hero3 from '../assets/hero3.png';
-import plaque from '../assets/plaque.png'; // Placeholder, you can lazy-load or optimize further
+import plaque from '../assets/plaque.png';
 
 const awards = [
   {
@@ -28,15 +28,9 @@ const awards = [
       icon: "/assets/plaque.png", // Placeholder path, replace with actual path to icon
     },
     {
-      id: 5,
-      title: "Lifetime Achievement Award",
-      description: "Presented to an esteemed ITL who has made a lasting impact on promoting diversity, equity, and inclusion within the Canadian legal profession throughout their career.",
-      icon: "/assets/plaque.png", // Placeholder path, replace with actual path to icon
-    },
-    {
       id: 6,
       title: "Rising Star Award",
-      description: "Acknowledging an up-and-coming ITL who shows exceptional promise, leadership, and dedication to advancing international law and diplomacy within the Canadian legal context.",
+      description: "The Rising Star Award honors a young ITL who has demonstrated outstanding potential, leadership, legal excellence, and a commitment to justice. This individual is poised to make a significant impact and is seen as a future leader within the Canadian legal community.",
       icon: "/assets/plaque.png", // Placeholder path, replace with actual path to icon
     },
     {
@@ -60,7 +54,7 @@ const awards = [
     {
       id: 10,
       title: "The Nobel Award",
-      description: "This is the flagship award of the year. This award recognizes an outstanding ITL who has shown exemplary leadership, advocacy, and dedication to advancing the interests and rights of internationally trained lawyers within the Canadian legal profession. This ITL would have displayed exceptional mentorship qualities and be a model and exemplary ITL in the Canadian Legal community.",
+      description: "This flagship award of the year recognizes an outstanding ITL who has demonstrated exceptional legal skills, consistently provides outstanding legal services, and is highly respected by peers and the broader Canadian legal community. The recipient exemplifies the qualities of a model ITL, excelling both in the practice of law and in their professional contributions. In addition, this ITL has shown exemplary leadership, advocacy, and dedication to advancing the interests and rights of internationally trained lawyers within the Canadian legal profession. They are celebrated for their exceptional mentorship and for being a respected and exemplary figure in the Canadian legal community",
       icon: "/assets/plaque.png", // Placeholder path, replace with actual path to icon
     },
 ];
@@ -98,15 +92,11 @@ const AwardsSection = () => {
                     The ITL Conference &#39;25 Awards
                 </h2>
                 <p className="text-center mb-4">
-                    At the upcoming ITL Conference, we will be recognizing the remarkable achievements and
-                    contributions of internationally trained lawyers (ITLs) and the stakeholders, community
-                    partners and law firms that support them.
+                At the upcoming ITL Conference, we will be recognizing the remarkable achievements and contributions of internationally trained lawyers (ITLs) and the stakeholders, community partners and law firms that support them. These awards celebrate excellence, innovation, and leadership within the Canadian legal profession, fostering a culture of equity, diversity, inclusion, and collaboration.
+
                 </p>
                 <p className="text-center">
-                    We invite ITLs, law firms, and legal professionals across Canada to participate in this prestigious
-                    recognition of talent and dedication. Below are the award categories designed to honor outstanding
-                    individuals, organizations, and initiatives that have made a significant impact on the Canadian
-                    legal landscape.
+                We invite ITLs, law firms, and legal professionals across Canada to participate in this prestigious recognition of talent and dedication. Below are the award categories designed to honor outstanding individuals, organizations, and initiatives that have made a significant impact on the Canadian legal landscape.
                 </p>
 
                 {/* Awards Grid */}

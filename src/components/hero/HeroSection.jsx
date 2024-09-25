@@ -126,7 +126,7 @@ const Hero = () => {
         <TextContainer>
           <h1 className='hero-deco text-5xl font-black'>THE ITL CONFERENCE &#39;25</h1>
           <p className='text-2xl font-bold'>Crossing Borders, Breaking Barriers.</p>
-          <p className='text-lg'>April 3-5, 2025 - Calgary, Alberta</p>
+          <p className='text-lg'>April 4-5, 2025 - The Westin Calgary</p>
           <div className="countdown-container">
             {Object.entries(timer).map(([unit, value]) => (
               <div key={unit} className="countdown-item">
@@ -147,7 +147,7 @@ const Hero = () => {
           </div>
 
           <div className="buttons-container">
-            <a href="/pre-register" className="bg-[#FEFBF6] hover:bg-ctaBg hover:text-bg text-wine font-bold py-3 px-6 rounded-lg transition-colors duration-300">Pre-Register Now</a>
+            <a href="/pre-register" className="bg-[#FEFBF6] hover:bg-ctaBg hover:text-bg text-wine font-bold py-3 px-6 rounded-lg transition-colors duration-300">Register Now</a>
             <a href="/our-sponsors" className="border border-[#A78295] hover:bg-ctaBg hover:text-bg text-bg font-bold py-3 px-6 rounded-lg transition-colors duration-300">Become a Sponsor</a>
           </div>
         </TextContainer>
