@@ -41,6 +41,7 @@ const Navbar = () => {
         <div className="hidden text-md md:flex gap-8 justify-center flex-1">
           <a href="/itl25-conference" className="font-black">ITL &#39;25 Conference</a>
           <a href="/pre-register" className="font-black">Registration</a>
+          <a href="/pricing" className="font-black">Pricing</a>
           <a href="/speakers" className="font-black">Speakers</a>
           <a href="/our-sponsors" className="font-black">Sponsors</a>
           <div className="relative">
