@@ -79,6 +79,7 @@ const Navbar = () => {
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden px-4 pt-2 pb-4 bg-cream text-deepBlue`}>
         <a href="/itl25-conference" className="block py-2 px-4 text-sm font-bold">ITL &#39;25 Conference</a>
         <a href="/pre-register" className="block py-2 px-4 text-sm font-bold">Registration</a>
+        <a href="/pricing" className="block py-2 px-4 text-sm font-bold">Pricing</a>
         <a href="/speakers" className="block py-2 px-4 text-sm font-bold">Speakers</a>
         <div className="block py-2 px-4 text-sm font-bold">
           <button aria-label="Toggle" onClick={toggleDropdown} className="w-full text-left">Team</button>

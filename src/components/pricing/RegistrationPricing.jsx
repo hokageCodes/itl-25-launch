@@ -104,7 +104,7 @@ const RegistrationPricing = () => {
     <>
 
         <div className="max-w-7xl mx-auto py-10 px-6 mt-16">
-        <h2 className="text-3xl font-bold text-center mb-8">Registration Pricing</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Registration Pricing</h2>
         <div className="grid lg:grid-cols-3 gap-8">
             {pricingData.map((category, index) => (
             <div key={index} className="border p-6 rounded-lg shadow-lg">
