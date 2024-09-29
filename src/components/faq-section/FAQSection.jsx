@@ -32,7 +32,7 @@ export const FAQsSection = () => {
             </button>
             {activeIndex === 1 && (
               <p className="mt-4 text-darkBrown text-lg">
-                The ITL Conference is the largest gathering of Internationally Trained Lawyers (ITLs) in Canada. The Conference will feature different legal professionals, regulators, change makers, and other stakeholders committed to supporting ITLs in their legal practice journey in Canada. The ITL Conference is a joint effort of our partner organizations: The ITL Network and Global Lawyers of Canada.
+                The ITL Conference is the largest gathering of Internationally Trained Lawyers (ITLs) in Canada. The Conference will feature different legal professionals, regulators, change makers, and other stakeholders committed to supporting ITLs in their legal practice journey in Canada. The ITL Conference is a joint effort of our partner organizations: The ITL Network, Global Lawyers of Canada, ITLNCA NetworkS and the Just One Yes (JOY) Initiative.
               </p>
             )}
           </div>
