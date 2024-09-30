@@ -115,28 +115,36 @@ const RegistrationPricing = () => {
 
       {/* Pricing Section */}
       <div className="max-w-7xl mx-auto py-10 px-6">
-        <div className="grid lg:grid-cols-3 gap-8">
-          {pricingData.map((category, index) => (
-            <div key={index} className="border p-6 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-black mb-4 text-darkBrown">{category.category}</h3>
-              {category.options.map((option, idx) => (
-                <div key={idx} className="mb-6">
-                  <h4 className="text-xl font-black text-wine">{option.title}</h4>
-                  <p className="text-lg font-black text-wine mb-4">{option.price}</p>
-                  <ul className="list-disc list-inside text-gray-700 mb-4">
-                    {option.details.map((detail, i) => (
-                      <li key={i}>{detail}</li>
-                    ))}
-                  </ul>
-                  <button className="bg-wine text-white py-2 px-4 rounded hover:bg-deepBlue transition duration-300">
-                    Register
-                  </button>
-                </div>
-              ))}
-            </div>
-          ))}
+  <div className="grid lg:grid-cols-3 gap-8">
+    {pricingData.map((category, index) => (
+      <div key={index} className="border p-6 rounded-lg shadow-lg">
+        
+        {/* Updated Full Background Behind Category */}
+        <div className="mb-6  bg-gradient-to-r from-deepBlue to-wine py-4 rounded-lg text-center">
+          <h3 className="text-2xl font-bold text-white">{category.category}</h3>
         </div>
+
+        {category.options.map((option, idx) => (
+          <div key={idx} className="mb-6">
+            <h4 className="text-xl font-black text-wine">{option.title}</h4>
+            <p className="text-lg font-black text-wine mb-4">{option.price}</p>
+            <ul className="list-disc list-inside text-gray-700 mb-4">
+              {option.details.map((detail, i) => (
+                <li key={i}>{detail}</li>
+              ))}
+            </ul>
+            <button className="bg-wine text-white py-2 px-4 rounded hover:bg-deepBlue transition duration-300">
+              Register
+            </button>
+          </div>
+        ))}
       </div>
+    ))}
+  </div>
+</div>
+      
+
+
 
       {/* Hotel Reservations */}
       <div className="max-w-7xl mx-auto py-10 px-6">

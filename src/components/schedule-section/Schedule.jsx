@@ -28,87 +28,79 @@ const ScheduleTimeline = () => {
         title: "Special Address (TBD)",
         time: "9:15 AM - 9:30 AM",
         location: "Calgary, Alberta",
-        details: `
-          • Topic: TBD
-        `,
+        details: `Topic: TBD`,
       },
       {
         title: "Panel Session: Overcoming Cultural Barriers and Building Professional Relationships",
         time: "9:30 AM - 10:30 AM",
         location: "Calgary, Alberta",
         details: `
-          • Speakers: TBD
+          In today’s increasingly diverse legal landscape, cultural barriers can pose significant challenges to effective communication and collaboration. 
+          Join our expert panel as they explore strategies for overcoming these barriers, fostering inclusivity, and building strong professional relationships. 
+          Through real-life examples and interactive discussions, attendees will gain valuable insights into how to navigate cultural differences and leverage 
+          them for success in the legal profession.
         `,
       },
       {
-        title: "Morning Coffee Break (Sponsored by The Westin)",
+        title: "Morning Coffee Break (Sponsored by The Westin Calgary)",
         time: "10:30 AM - 11:00 AM",
         location: "Calgary, Alberta",
         details: `
-          • Refreshments
           • Networking and exhibitor interactions
         `,
       },
       {
-        title: "Keynote Address: Crossing Borders, Breaking Barriers",
-        time: "11:00 AM - 11:30 AM",
+        title: "Keynote Address - Crossing Borders, Breaking Barriers",
+        time: "11:00 AM - 11:30 PM",
         location: "Calgary, Alberta",
         details: `
-          • Speaker: TBD
+          • Topic: Crossing Borders, Breaking Barriers
         `,
       },
       {
-        title: "General Panel Discussion: Enhancing Integration and Professional Development for Internationally Trained Lawyers",
+        title: "Panel Session: Enhancing Integration and Professional Development for Internationally Trained Lawyers",
         time: "11:30 AM - 12:30 PM",
         location: "Calgary, Alberta",
         details: `
-          • Panelists: TBD
-          • Moderator: TBD
+          This session will bring together law societies, regulators, and members of the judiciary to discuss the integration of internationally trained lawyers 
+          into the Canadian legal system. Panelists will address the challenges faced by these professionals and share insights on existing programs and policies 
+          aimed at enhancing their professional development.
         `,
       },
       {
         title: "Networking Lunch",
         time: "12:30 PM - 1:30 PM",
         location: "Calgary, Alberta",
+        details: `• Buffet lunch`,
+      },
+      {
+        title: "Breakout Session I (Choose One)",
+        time: "1:30 PM - 2:30 PM",
+        location: "Calgary, Alberta",
         details: `
-          • Buffet lunch
-          • Networking opportunities
+          • Session A: Navigating the Corporate World: Strategies for In-House Counsel
+          • Session B: Mastering Litigation: Strategies for Internationally Trained Litigators
+          • Session C: Thriving in Private Practice: Insights for Internationally Trained Lawyers
+          • Session D: Navigating the NCA & Articling Process: Strategies and Support for NCA Students
         `,
       },
       {
-        title: "Breakout Sessions (Choose One)",
-        time: "1:30 PM - 3:00 PM",
+        title: "Breakout Session II (Choose One)",
+        time: "2:30 PM - 3:30 PM",
         location: "Calgary, Alberta",
         details: `
-          • Session A: Navigating the Corporate World: Strategies for In-House Counsel (Speaker: TBD)
-          • Session B: Mastering Litigation: Strategies for Internationally Trained Litigators (Speaker: TBD)
-          • Session C: Thriving in Private Practice: Insights for Internationally Trained Lawyers (Speaker: TBD)
-          • Session D: Navigating the NCA & Articling Process: Strategies and Support for NCA Students (Speaker: TBD)
+          • Session A: Employment Law Fundamentals
+          • Session B: Thriving as a Sole Practitioner: Strategies for Success
+          • Session C: M&A Insights: Navigating Complex Transactions in a Post-Pandemic World
+          • Session D: Recent Changes to Immigration Policies: Essential Updates for Legal Practitioners
         `,
       },
       {
         title: "Fireside Chat: Wealth Management for Lawyers",
-        time: "3:00 PM - 3:30 PM",
+        time: "3:30 PM - 4:00 PM",
         location: "Calgary, Alberta",
         details: `
-          • Speakers: TBD
-        `,
-      },
-      {
-        title: "Panel Discussion: Crossing Borders, Breaking Barriers: Where do we go from here?",
-        time: "3:30 PM - 5:00 PM",
-        location: "Calgary, Alberta",
-        details: `
-          • Speakers: TBD
-        `,
-      },
-      {
-        title: "Closing Remarks",
-        time: "5:00 PM - 6:00 PM",
-        location: "Calgary, Alberta",
-        details: `
-          • Summary of the day's activities
-          • Information on Day Two's Gala and Awards Night
+          Join us for an engaging fireside chat on wealth management tailored for legal professionals. Learn strategies for long-term financial planning, investment opportunities, and managing legal practice finances.
         `,
       },
     ],

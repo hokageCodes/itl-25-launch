@@ -45,7 +45,7 @@ function App() {
           <Route path="/awards" element={<MainLayout><AwardsPage /></MainLayout>} />
           <Route path="/volunteer" element={<MainLayout><Volunteer /></MainLayout>} />
           <Route path="/nominate" element={<MainLayout><MultiStepForm /></MainLayout>} />
-          <Route path="/pricing" element={<MainLayout><RegistrationPricing /></MainLayout>} />
+          <Route path="/registration" element={<MainLayout><RegistrationPricing /></MainLayout>} />
 
           {/* Nested routes for team */}
           <Route path="/team" element={<MainLayout><TeamPage /></MainLayout>}>
