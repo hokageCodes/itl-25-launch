@@ -40,7 +40,7 @@ const AboutSection = () => {
                   aria-label="Submit"
                   className="bg-wine text-white hover:bg-wine hover:text-cream rounded-md px-6 py-3 transition duration-300 ease-in-out"
                 >
-                  <a href="/pre-register">Register</a>
+                  <a href="/registration">Register</a>
                 </button>
               </div>
             </div>

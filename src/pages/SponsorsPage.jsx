@@ -34,20 +34,21 @@ const SponsorsPage = () => {
         <div className="mb-12">
           <h1 className="text-3xl font-bold text-center text-deepBlue mb-4">Meet Our Sponsors</h1>
           <p className="text-lg text-center text-darkBrown">
-            This is your invitation to partner with us for the ITL Conference.
+            We are excited to invite you to partner with us for the <strong>ITL Conference 2025</strong>! We offer a variety of sponsorship options, each thoughtfully designed to provide maximum exposure and benefits to our partners.
             <br />
-            We offer a range of sponsorship options, each designed to provide maximum exposure and benefits to our partners.
+            Whether you aim to make a significant impact as a <strong>Title Sponsor</strong> or engage as a <strong>Session Sponsor</strong>, we have options to suit different levels of commitment and visibility.
             <br />
-            Whether you are looking to make a significant impact as a Title Sponsor or engage as a Session Sponsor, we have options that cater to different levels of commitment and exposure.
+            For inquiries or to discuss any sponsorship opportunities, please contact us directly at: 
+            <a href="mailto:info@itlconference.ca" className="text-wine underline"> info@itlconference.ca</a>.
             <br />
-            Please contact us directly to confirm or discuss any sponsorship opportunities for the ITL Conference 2025 at <a href="mailto:info@itlconference.ca" className="text-wine underline">info@itlconference.ca</a> or by downloading the sponsorship package below.
+            Alternatively, you can download our sponsorship package below.
           </p>
         </div>
 
         {/* PDF Links and Intro Text */}
         <div className="text-center mb-12">
           <p className="text-lg text-darkBrown mb-8">
-            To view our complete package in English and French, click the links below.
+            To view our complete package in <strong>English</strong> and <strong>French</strong>, click the links below.
           </p>
 
           <div className="flex justify-center space-x-6">

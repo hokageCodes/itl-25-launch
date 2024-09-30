@@ -38,23 +38,21 @@ const ScheduleTimeline = () => {
           In today’s increasingly diverse legal landscape, cultural barriers can pose significant challenges to effective communication and collaboration. 
           Join our expert panel as they explore strategies for overcoming these barriers, fostering inclusivity, and building strong professional relationships. 
           Through real-life examples and interactive discussions, attendees will gain valuable insights into how to navigate cultural differences and leverage 
-          them for success in the legal profession.
+          them for success in the legal profession. Don’t miss this opportunity to engage with thought leaders and enhance your professional network.
         `,
       },
       {
         title: "Morning Coffee Break (Sponsored by The Westin Calgary)",
         time: "10:30 AM - 11:00 AM",
         location: "Calgary, Alberta",
-        details: `
-          • Networking and exhibitor interactions
-        `,
+        details: `• Networking and exhibitor interactions`,
       },
       {
         title: "Keynote Address - Crossing Borders, Breaking Barriers",
-        time: "11:00 AM - 11:30 PM",
+        time: "11:00 AM - 11:30 AM",
         location: "Calgary, Alberta",
         details: `
-          • Topic: Crossing Borders, Breaking Barriers
+          • Topic: Crossing Borders, Breaking Barriers 
         `,
       },
       {
@@ -62,9 +60,9 @@ const ScheduleTimeline = () => {
         time: "11:30 AM - 12:30 PM",
         location: "Calgary, Alberta",
         details: `
-          This session will bring together law societies, regulators, and members of the judiciary to discuss the integration of internationally trained lawyers 
-          into the Canadian legal system. Panelists will address the challenges faced by these professionals and share insights on existing programs and policies 
-          aimed at enhancing their professional development.
+          This informative session will bring together law societies, regulators and members of the judiciary to discuss the integration of internationally trained lawyers 
+          into the Canadian legal system. Panelists will address the challenges faced by these professionals and share insights on existing programs and policies aimed at enhancing their professional development. 
+          Attendees will have the chance to learn about best practices, emerging trends, and collaborative efforts to create a more inclusive legal environment. Join us for a thought-provoking discussion that will empower internationally trained lawyers to thrive in their careers.
         `,
       },
       {
