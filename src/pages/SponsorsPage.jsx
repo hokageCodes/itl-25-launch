@@ -12,7 +12,7 @@ const sponsorsData = {
   ],
   "Gold Sponsor": [
     { id: 1, logo: '/assets/law-society.png', name: 'Law Society of Alberta' },
-    { id: 2, logo: '/assets/Westin.png', name: 'Westin Hotels & Resorts' },
+    { id: 2, logo: '/assets/the-westin.png', name: 'Westin Hotels & Resorts' },
     { id: 3, logo: '/assets/Osgoode.png', name: 'Osgoode' },
   ],
   "Session Sponsor": [
