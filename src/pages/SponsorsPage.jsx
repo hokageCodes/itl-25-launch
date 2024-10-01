@@ -22,7 +22,7 @@ const sponsorsData = {
     { id: 1, logo: '/assets/unicalgary.png', name: 'University of Calgary' },
   ],
   "Partners": [
-    { id: 1, logo: '/assets/default.png', name: 'Partners Sponsor 1' }, 
+    { id: 1, logo: '/assets/default.png', name: 'Partners Sponsor 1' },
   ],
 };
 
@@ -84,7 +84,12 @@ const SponsorsPage = () => {
             <div className="flex justify-center flex-wrap space-x-8">
               {sponsorsData[category].map((sponsor) => (
                 <div key={sponsor.id} className="p-4">
-                  <img src={sponsor.logo} alt={`${sponsor.name} logo`} className="h-32 w-auto object-contain border" />
+                  <img
+                    src={sponsor.logo}
+                    alt={`${sponsor.name} logo`}
+                    className="h-32 w-auto object-contain border"
+                    loading={category === "Title Sponsor" ? "eager" : "lazy"} // Load Title Sponsor images eagerly, others lazily
+                  />
                 </div>
               ))}
             </div>

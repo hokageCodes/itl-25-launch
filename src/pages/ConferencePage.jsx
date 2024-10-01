@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -7,28 +6,15 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import AboutSection from '../components/about-us/About';
 import PartnersSection from '../components/partners/PartnersSection';
 import Schedule from '../components/schedule-section/Schedule';
-import hero1 from '/assets/hero1.png';
+import hero1 from '/assets/hero1.webp';
 import hero2 from '/assets/conn.png';
-import hero3 from '/assets/hero3.png';
+import hero3 from '/assets/hero3.webp';
 
 export default function ConferencePage() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulating data loading delay
-    const timeout = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timeout);
-  }, []);
 
   return (
     <>
-      {isLoading ? (
-        <h1>Loading...</h1>
-      ) : (
-        <div className="pt-24">
+      <div className="pt-24">
           {/* Swiper carousel setup */}
           <Swiper
             autoplay={{
@@ -61,7 +47,6 @@ export default function ConferencePage() {
             <Schedule />
           </main>
         </div>
-      )}
     </>
   );
 }
