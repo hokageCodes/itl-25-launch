@@ -168,7 +168,7 @@ const RegistrationPricing = () => {
                   {/* Register CTA */}
                   <button
                     className={`w-full py-3 text-white font-bold rounded-md 
-                    ${loading ? "bg-gray-500" : "bg-deepBlue hover:bg-wine"} transition duration-300`}
+                    ${loading ? "bg-gray-500" : "bg-wine hover:bg-deepBlue"} transition duration-300`}
                     onClick={handleRegisterClick}
                     disabled={loading}
                   >
