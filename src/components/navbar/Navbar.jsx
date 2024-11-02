@@ -81,6 +81,7 @@ const Navbar = () => {
         {/* <a href="/pre-register" className="block py-2 px-4 text-sm font-bold">Registration</a> */}
         <a href="/registration" className="block py-2 px-4 text-sm font-bold">Registration</a>
         <a href="/speakers" className="block py-2 px-4 text-sm font-bold">Speakers</a>
+        <a href="/our-sponsors" className="block py-2 px-4 text-sm font-bold">Sponsors</a>
         <div className="block py-2 px-4 text-sm font-bold">
           <button aria-label="Toggle" onClick={toggleDropdown} className="w-full text-left">Team</button>
           {isDropdownOpen && (

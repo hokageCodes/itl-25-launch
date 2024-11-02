@@ -1,12 +1,12 @@
 import SponsorForm from "../components/sponsor-form/SponsorForm";
 
 const sponsorsData = {
-  "Title Sponsor": [
-    { id: 1, logo: '/assets/default.png', name: 'Title Sponsor 1' },
-  ],
-  "Platinum Sponsor": [
-    { id: 1, logo: '/assets/default.png', name: 'Platinum Sponsor 1' },
-  ],
+  // "Title Sponsor": [
+  //   { id: 1, logo: '/assets/default.png', name: 'Title Sponsor 1' },
+  // ],
+  // "Platinum Sponsor": [
+  //   { id: 1, logo: '/assets/default.png', name: 'Platinum Sponsor 1' },
+  // ],
   "Diamond Sponsor": [
     { id: 1, logo: '/assets/gowling.png', name: 'Gowling WLG' },
   ],
@@ -17,13 +17,15 @@ const sponsorsData = {
   ],
   "Session Sponsor": [
     { id: 1, logo: '/assets/CCPLE.png', name: 'CCPLE' },
+    { id: 1, logo: '/assets/uni-berta.png', name: 'University of Alberta' },
   ],
   "Exhibition Sponsor": [
     { id: 1, logo: '/assets/unicalgary.png', name: 'University of Calgary' },
+    { id: 1, logo: '/assets/LESA.png', name: 'LESA' },
   ],
-  "Partners": [
-    { id: 1, logo: '/assets/default.png', name: 'Partners Sponsor 1' },
-  ],
+  // "Partners": [
+  //   { id: 1, logo: '/assets/default.png', name: 'Partners Sponsor 1' },
+  // ],
 };
 
 const SponsorsPage = () => {

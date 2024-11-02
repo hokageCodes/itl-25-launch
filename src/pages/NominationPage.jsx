@@ -7,11 +7,11 @@ const firestore = getFirestore(app);
 const formSteps = [
   { title: "Nominator's Information", fields: ["Nominator's Name", "Nominator's Telephone Number", "Nominator's Email"] },
   { title: "Nominee's Information", fields: ["Nominee's Name", "Nominee's Email"] },
-  { title: 'Nomination Details', fields: ['Nomination Category', 'Reason(s) for nominating', 'Web Links and Supporting Documentation'] },
+  { title: 'Nomination Details', fields: ['Nomination Category', 'Reason(s) for nominating', 'Supporting Document'] },
 ];
 
 const nominationCategories = [
-  'Diversity Champion', 'Community Impact Award', 'Leadership in Legal Education Award', 'Trailblazer in Technology Award', 'Lifetime Achievement Award',
+  'Diversity Champion', 'Community Impact Award', 'Leadership in Legal Education Award', 'Trailblazer in Technology Award',
   'Rising Star Award', 'Mentorship Excellence Award', 'Innovative Recruitment Award', 'Entrepreneurial Excellence Award', 'The Nobel Award'
 ];
 
@@ -21,6 +21,17 @@ const MultiStepForm = () => {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [file, setFile] = useState(null);
+
+
+  const handleFileChange = (e) => {
+    const selectedFile = e.target.files[0];
+    if (selectedFile) {
+      setFile(selectedFile);
+    }
+  };
+  
+
 
   const validateFields = () => {
     const currentFields = formSteps[currentStep].fields;

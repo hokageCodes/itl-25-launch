@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ScheduleTimeline from "../schedule-section/Schedule";
+import AgendaTable from "../Agenda";
 
 const pricingData = [
   {
@@ -7,7 +7,7 @@ const pricingData = [
     options: [
       {
         title: "Conference Only",
-        price: "$80.00",
+        price: "$90.00 (Early Bird - $69.99)",
         details: [
           "Full day Conference access & networking",
           "Catered breakfast & lunch",
@@ -20,7 +20,7 @@ const pricingData = [
       },
       {
         title: "Conference & Gala",
-        price: "$150.00",
+        price: "$180.00 (Early Bird - $139.99)",
         details: [
           "Full 2-day Conference access & networking",
           "Catered breakfast & lunch",
@@ -167,8 +167,8 @@ const RegistrationPricing = () => {
 
                   {/* Register CTA */}
                   <button
-                    className={`w-full py-3 text-white font-bold rounded-md 
-                    ${loading ? "bg-gray-500" : "bg-wine hover:bg-deepBlue"} transition duration-300`}
+                    className={`w-auto px-4 py-3 text-white font-bold rounded-md 
+                      ${loading ? "bg-gray-500" : "bg-deepBlue hover:bg-wine"} transition duration-300`}
                     onClick={handleRegisterClick}
                     disabled={loading}
                   >
@@ -202,10 +202,7 @@ const RegistrationPricing = () => {
       {/* Hotel Reservations */}
       <div className="max-w-7xl mx-auto py-10 px-6">
         <h2 className="text-3xl font-black text-center mb-6 text-wine">Hotel Reservations</h2>
-        <p className="text-lg">
-          We have reserved a block of rooms at <b>The Westin Calgary</b> at a discounted rate of <b>$195.00</b> per night. To book directly, please call Marriott reservations at 
-          <b>1-888-627-8417</b> or contact The Westin Calgary Hotel directly at <b>(403) 266-1611.</b> Please use the group name <b>“The ITL Conference”</b> to identify that you are booking for the Conference.
-        </p>
+        <p className="text-lg">We have reserved a block of rooms at The Westin Calgary at a discounted rate of $195.00 per night.<a href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1727797233342&key=GRP&guestreslink2=true"> Please book through this <b className="underline">Link</b></a></p>
       </div>
 
       {/* Airline Discounts */}
@@ -223,7 +220,7 @@ const RegistrationPricing = () => {
           </li>
         </ul>
       </div>
-      <ScheduleTimeline />
+      <AgendaTable />
     </>
   );
 };

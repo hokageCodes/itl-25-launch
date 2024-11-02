@@ -146,6 +146,7 @@ const AwardsSection = () => {
                         Click here to nominate
                     </a>
                 </div>
+                <p className='mt-8 text-center text-lg'>A selection committee comprised of esteemed members of the Canadian legal community will thoroughly evaluate the nominations and determine the recipients of the awards based on the quality and relevance of the submitted materials. This committee, known for its commitment to excellence and integrity, will ensure a rigorous and impartial assessment process, recognizing outstanding contributions under each category.</p>
             </div>
         </div>
     );

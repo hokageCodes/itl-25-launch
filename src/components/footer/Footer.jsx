@@ -19,8 +19,8 @@ const Footer = () => {
         </div>
         <div className="p-5">
           <div className="text-sm uppercase font-bold text-white">Legal</div>
-          <a className="my-3 block text-white hover:text-cream" href="#">Privacy Policy</a>
-          <a className="my-3 block text-white hover:text-cream" href="#">Terms and Conditions</a>
+          <a className="my-3 block text-white hover:text-cream" href="/privacy-policy">Privacy Policy</a>
+          <a className="my-3 block text-white hover:text-cream" href="/terms">Terms and Conditions</a>
         </div>
         <div className="p-5">
           <div className="text-sm uppercase font-bold text-white">Contact Us</div>
