@@ -44,11 +44,16 @@ const PlanningTeamSection = () => {
       role: "Sponsorship Committee Co-Lead",
       img: "/assets/planning/spons-lead.webp",
     },
+    {
+      name: "Juliette Omonigho",
+      role: "Programs Committee Lead",
+      img: "/assets/julie.webp",             
+    },
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true); // Simulating loading state
-  const membersPerPage = 8;
+  const membersPerPage = 9;
 
   const indexOfLastMember = currentPage * membersPerPage;
   const indexOfFirstMember = indexOfLastMember - membersPerPage;

@@ -7,6 +7,9 @@ const sponsorsData = {
   // "Platinum Sponsor": [
   //   { id: 1, logo: '/assets/default.png', name: 'Platinum Sponsor 1' },
   // ],
+  "Executive Platinum Sponsor": [
+    { id: 1, logo: '/assets/osl.png', name: 'Osuji & Smith Lawyers' },
+  ],
   "Diamond Sponsor": [
     { id: 1, logo: '/assets/gowling.png', name: 'Gowling WLG' },
   ],
@@ -19,13 +22,28 @@ const sponsorsData = {
     { id: 1, logo: '/assets/CCPLE.png', name: 'CCPLE' },
     { id: 1, logo: '/assets/uni-berta.png', name: 'University of Alberta' },
   ],
+  "Table Sponsor": [
+    { id: 1, logo: '/assets/cba.png', name: 'CBA' },
+  ],
   "Exhibition Sponsor": [
     { id: 1, logo: '/assets/unicalgary.png', name: 'University of Calgary' },
     { id: 1, logo: '/assets/LESA.png', name: 'LESA' },
+    { id: 1, logo: '/assets/emond.png', name: 'LESA' },
+    { id: 1, logo: '/assets/uofm.png', name: 'UOFM' },
+    { id: 1, logo: '/assets/cba.png', name: 'CBA' },
   ],
-  // "Partners": [
-  //   { id: 1, logo: '/assets/default.png', name: 'Partners Sponsor 1' },
-  // ],
+  "National Partners": [
+    { id: 1, logo: '/assets/10.png', name: 'Partners Sponsor 1' },
+    { id: 1, logo: '/assets/11.png', name: 'Partners Sponsor 1' },
+    { id: 1, logo: '/assets/12.png', name: 'Partners Sponsor 1' },
+    { id: 1, logo: '/assets/13.png', name: 'Partners Sponsor 1' },
+    { id: 1, logo: '/assets/14.png', name: 'Partners Sponsor 1' },
+    { id: 1, logo: '/assets/cabl1.png', name: 'CABL' },
+    { id: 1, logo: '/assets/fidi2.png', name: 'FIDI' },
+    { id: 1, logo: '/assets/gesq3.png', name: 'G-Esq' },
+    { id: 1, logo: '/assets/nca4.png', name: 'NCA' },
+    { id: 1, logo: '/assets/UCBA.png', name: 'UCBA' },
+  ],
 };
 
 const SponsorsPage = () => {
@@ -102,6 +120,8 @@ const SponsorsPage = () => {
             )}
           </div>
         ))}
+
+<hr className="my-12 border-t border-butter" />
 
         {/* Sponsor Form */}
         <div className="mt-12">

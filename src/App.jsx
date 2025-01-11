@@ -29,6 +29,7 @@ import ProtectedRoute from '../ProtectedRoute';
 import RegistrationPricing from './components/pricing/RegistrationPricing';
 import PrivacyPolicyAccordion from './pages/PrivacyPolicyPage';
 import TermsAndConditionsAccordion from './pages/TermsConditionsPage';
+import { AuthProvider } from './context/AuthContext';
 
 const AppContent = () => {
   return (
@@ -99,9 +100,11 @@ const App = () => {
   }, [progress]);
 
   return (
-    <Router>
-      {loading ? <Loader progress={progress} /> : <AppContent />}
-    </Router>
+    <AuthProvider>
+      <Router>
+        {loading ? <Loader progress={progress} /> : <AppContent />}
+      </Router>
+    </AuthProvider>
   );
 };
 

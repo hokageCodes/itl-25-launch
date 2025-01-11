@@ -109,6 +109,7 @@ const AdminSponsorships = () => {
     { label: "Email", key: "email" },
     { label: "Phone Number", key: "phoneNumber" },
     { label: "Location", key: "location" },
+    { label: "SponsorshipLevel", key: "sponsorshipLevel" },
     { label: "Timestamp", key: "timestamp" }
   ];
 
@@ -225,6 +226,7 @@ const AdminSponsorships = () => {
             <th className="border border-gray-300 p-2">Name</th>
             <th className="border border-gray-300 p-2">Email</th>
             <th className="border border-gray-300 p-2">Phone</th>
+            <th className="border border-gray-300 p-2">Level</th>
             <th className="border border-gray-300 p-2">Location</th>
             <th className="border border-gray-300 p-2">Actions</th>
           </tr>
@@ -235,6 +237,7 @@ const AdminSponsorships = () => {
               <td className="border border-gray-300 p-2">{sponsorship.name}</td>
               <td className="border border-gray-300 p-2">{sponsorship.email}</td>
               <td className="border border-gray-300 p-2">{sponsorship.phoneNumber}</td>
+              <td className="border border-gray-300 p-2">{sponsorship.sponsorshipLevel}</td>
               <td className="border border-gray-300 p-2">{sponsorship.location}</td>
               <td className="border border-gray-300 p-2">
                 <button 

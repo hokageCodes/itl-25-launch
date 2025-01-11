@@ -1,21 +1,30 @@
 import { useState } from 'react';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
+import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { app } from '../../firebaseConfig';
 
-const firestore = getFirestore(app);
+const db = getFirestore(app);
+const storage = getStorage(app);
 
 const formSteps = [
   { title: "Nominator's Information", fields: ["Nominator's Name", "Nominator's Telephone Number", "Nominator's Email"] },
   { title: "Nominee's Information", fields: ["Nominee's Name", "Nominee's Email"] },
-  { title: 'Nomination Details', fields: ['Nomination Category', 'Reason(s) for nominating', 'Supporting Document'] },
+  { title: 'Nomination Details', fields: ['Nomination Category', 'Detailed Reasons for Nominating', 'Supporting Links'] },
 ];
 
 const nominationCategories = [
-  'Diversity Champion', 'Community Impact Award', 'Leadership in Legal Education Award', 'Trailblazer in Technology Award',
-  'Rising Star Award', 'Mentorship Excellence Award', 'Innovative Recruitment Award', 'Entrepreneurial Excellence Award', 'The Nobel Award'
+  'Diversity Champion',
+  'Community Impact Award',
+  'Leadership in Legal Education Award',
+  'Trailblazer in Technology Award',
+  'Rising Star Award',
+  'Mentorship Excellence Award',
+  'Innovative Recruitment Award',
+  'Entrepreneurial Excellence Award',
+  'The Nobel Award',
 ];
 
-const MultiStepForm = () => {
+const MultiStepNominationForm = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState({});
   const [errors, setErrors] = useState({});
@@ -23,25 +32,18 @@ const MultiStepForm = () => {
   const [success, setSuccess] = useState(false);
   const [file, setFile] = useState(null);
 
-
-  const handleFileChange = (e) => {
-    const selectedFile = e.target.files[0];
-    if (selectedFile) {
-      setFile(selectedFile);
-    }
-  };
-  
-
-
   const validateFields = () => {
     const currentFields = formSteps[currentStep].fields;
     const currentErrors = {};
-
     let isValid = true;
 
-    currentFields.forEach(field => {
-      if (!formData[field]) {
+    currentFields.forEach((field) => {
+      if (field !== 'Supporting Links' && !formData[field]) {
         currentErrors[field] = `${field} is required`;
+        isValid = false;
+      }
+      if (field.includes('Email') && formData[field] && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData[field])) {
+        currentErrors[field] = 'Invalid email address';
         isValid = false;
       }
     });
@@ -52,137 +54,139 @@ const MultiStepForm = () => {
 
   const nextStep = () => {
     if (validateFields()) {
-      setCurrentStep(prev => prev + 1);
+      setCurrentStep((prev) => prev + 1);
     }
   };
 
   const previousStep = () => {
-    setCurrentStep(prev => prev - 1);
+    setCurrentStep((prev) => prev - 1);
+  };
+
+  const handleFileChange = (e) => {
+    setFile(e.target.files[0]);
   };
 
   const handleSubmit = async () => {
     if (validateFields()) {
       setLoading(true);
-
+  
       try {
-        await addDoc(collection(firestore, 'nominationsSubmissions'), {
-          formData,
+        let fileURL = null;
+  
+        if (file) {
+          const fileRef = ref(storage, `supportingDocuments/${file.name}`);
+          const snapshot = await uploadBytes(fileRef, file);
+          fileURL = await getDownloadURL(snapshot.ref);
+        }
+  
+        await addDoc(collection(db, 'nominationSubmissions'), {
+          ...formData,
+          supportingDocument: fileURL,
           timestamp: new Date(),
         });
-
-        setLoading(false);
+  
         setSuccess(true);
+        setFormData({});
+        setFile(null);
+        setCurrentStep(0);
       } catch (error) {
         console.error('Error submitting form:', error);
+      } finally {
         setLoading(false);
-        // Handle error state appropriately
       }
     }
   };
+  
+
 
   const handleInputChange = (e, field) => {
     const { value } = e.target;
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   return (
-    <div className="bg-bg min-h-screen py-24">
-      <div className="max-w-4xl mx-auto bg-white p-8 rounded shadow-lg">
-        <h1 className="text-2xl font-black text-center mb-8 text-textPrimary">The Impact Awards Nomination Form</h1>
-
-        <ol className="flex items-center w-full text-sm font-medium text-center text-text-Primary dark:text-gray-400 sm:text-base mb-8">
-          {formSteps.map((step, index) => (
-            <li key={index} className={`flex md:w-full items-center ${currentStep === index ? 'text-text-Primary dark:text-textPrimary font-bold' : ''}`}>
-              <span className="flex items-center">
-                <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 3a7 7 0 1 1 0 14 7 7 0 0 1 0-14zM5.364 8.636a1 1 0 0 1 1.414-1.414L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z" clipRule="evenodd" />
-                </svg>
-                {step.title}
-              </span>
-            </li>
-          ))}
-        </ol>
-
-        <h2 className="text-xl font-bold mb-4">{formSteps[currentStep].title}</h2>
-
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+      <div className="bg-white p-8 rounded shadow-lg max-w-xl w-full">
+        <h2 className="text-2xl font-bold mb-6 text-center">{formSteps[currentStep].title}</h2>
         <div>
-          {formSteps[currentStep].fields.map((field, index) => (
-            <div key={index}>
+          {formSteps[currentStep].fields.map((field, idx) => (
+            <div key={idx} className="mb-4">
               {field === 'Nomination Category' ? (
-                <div className="mb-4">
-                  <label className="block font-medium mb-1">{field}</label>
-                  <select
-                    className="border p-2 w-full rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    value={formData[field] || ''}
-                    onChange={(e) => handleInputChange(e, field)}
-                  >
-                    <option value="">Select</option>
-                    {nominationCategories.map((category, index) => (
-                      <option key={index} value={category}>{category}</option>
-                    ))}
-                  </select>
-                </div>
+                <select
+                  className="w-full border px-4 py-2 rounded"
+                  value={formData[field] || ''}
+                  onChange={(e) => handleInputChange(e, field)}
+                >
+                  <option value="">Select Category</option>
+                  {nominationCategories.map((category, index) => (
+                    <option key={index} value={category}>
+                      {category}
+                    </option>
+                  ))}
+                </select>
               ) : (
-                <div className="mb-4">
-                  <label className="block font-medium mb-1 text-textPrimary">{field}</label>
-                  {field === 'Reason(s) for nominating' ? (
-                    <textarea
-                      className="border p-2 w-full rounded focus:outline-none focus:ring-2 focus:ring-purple-500 h-32 resize-none"
-                      value={formData[field] || ''}
-                      onChange={(e) => handleInputChange(e, field)}
-                    ></textarea>
-                  ) : (
-                    <input
-                      className="border p-2 w-full rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
-                      type="text"
-                      placeholder={field}
-                      value={formData[field] || ''}
-                      onChange={(e) => handleInputChange(e, field)}
-                    />
-                  )}
-                </div>
+                <input
+                  className="w-full border px-4 py-2 rounded"
+                  placeholder={field}
+                  value={formData[field] || ''}
+                  onChange={(e) => handleInputChange(e, field)}
+                />
               )}
-              {errors[field] && <div className="text-red-500">{errors[field]}</div>}
+              {errors[field] && <p className="text-red-500 text-sm">{errors[field]}</p>}
             </div>
           ))}
+          {currentStep === 2 && (
+            <div className="mb-4">
+              <label className="block mb-2 text-sm font-medium text-gray-700">Supporting Document</label>
+              <input
+                type="file"
+                className="w-full border px-4 py-2 rounded"
+                onChange={handleFileChange}
+              />
+            </div>
+          )}
         </div>
-
-        <div className="flex justify-between mt-8">
+        <div className="flex justify-between mt-4">
           {currentStep > 0 && (
-            <button onClick={previousStep} className="bg-wine hover:bg-deepBlue text-white font-bold py-2 px-4 rounded">
+            <button
+              onClick={previousStep}
+              className="bg-gray-500 text-white px-4 py-2 rounded"
+            >
               Back
             </button>
           )}
-          {currentStep < formSteps.length - 1 && (
-            <button onClick={nextStep} className="bg-wine hover:bg-deepBlue text-white font-bold py-2 px-4 rounded">
+          {currentStep < formSteps.length - 1 ? (
+            <button
+              onClick={nextStep}
+              className="bg-wine text-white px-4 py-2 rounded"
+            >
               Next
             </button>
-          )}
-          {currentStep === formSteps.length - 1 && (
-            <button onClick={handleSubmit} className={`bg-wine hover:bg-deepBlue text-white font-bold py-2 px-4 rounded ${loading ? 'opacity-50 cursor-not-allowed' : ''}`} disabled={loading}>
-              {loading ? 'Loading...' : 'Submit'}
+          ) : (
+            <button
+            onClick={handleSubmit}
+            className={`bg-deepBlue text-white px-4 py-2 rounded ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+            disabled={loading}
+            >
+              {loading ? 'Submitting...' : 'Submit'}
             </button>
           )}
         </div>
-
-        <div className="mt-8 text-center text-gray-900 font-bold">
-          Need assistance? Contact support at info@itlconference.ca.
-        </div>
-
-        {success && (
-          <div className="fixed inset-0 flex justify-center items-center bg-gray-900 bg-opacity-50 z-50">
-            <div className="bg-white p-8 rounded shadow-lg">
-              <h2 className="text-xl font-bold mb-4">Success!</h2>
-              <p className="text-gray-700 mb-4">Your nomination has been submitted successfully.</p>
-              <button onClick={() => setSuccess(false)} className="bg-wine hover:bg-deepBlue text-white font-bold py-2 px-4 rounded">
-                <a href="/">Go Back Home</a>
-              </button>
-            </div>
-          </div>
-        )}
       </div>
+      {success && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-8 rounded shadow-lg">
+            <h2 className="text-xl font-bold">Success!</h2>
+            <p>Your nomination has been successfully submitted.</p>
+            <button className='p-8 rounded-lg bg-black text-white'>
+              <a href="/">Go back to homepage</a>
+            </button>
+          </div>
+        </div>
+      )}
+      <p>Need assistance? Contact support at info@itlconference.ca.</p>
     </div>
   );
 };
 
-export default MultiStepForm;
+export default MultiStepNominationForm;

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import AgendaTable from "../Agenda";
+import ScheduleTimeline from "../schedule-section/Schedule";
 
 const pricingData = [
   {
@@ -141,8 +141,8 @@ const RegistrationPricing = () => {
         <p className="mt-4 text-lg ml-6 mr-6">
           Be sure to follow us on all social media channels to stay up to date
           on ticket sales and all other event announcements. Early bird ticket
-          sales will begin on October 1st and end on November 15, 2024. Regular
-          ticket sales will begin on November 16, 2024.
+          sales will begin on October 1st and end on November 30, 2024. Regular
+          ticket sales will begin on December 1st, 2024.
         </p>
       </div>
 
@@ -220,7 +220,7 @@ const RegistrationPricing = () => {
           </li>
         </ul>
       </div>
-      <AgendaTable />
+      <ScheduleTimeline />
     </>
   );
 };

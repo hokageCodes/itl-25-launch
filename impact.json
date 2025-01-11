@@ -1,0 +1,111 @@
+{
+    "form": {
+      "title": "The Impact Awards Nomination Form",
+      "steps": [
+        {
+          "title": "Nominator's Information",
+          "fields": [
+            {
+              "type": "text",
+              "label": "Nominator's Name",
+              "required": true,
+              "key": "nominator_name"
+            },
+            {
+              "type": "tel",
+              "label": "Nominator's Telephone Number",
+              "required": true,
+              "key": "nominator_telephone"
+            },
+            {
+              "type": "email",
+              "label": "Nominator's Email",
+              "required": true,
+              "key": "nominator_email"
+            }
+          ]
+        },
+        {
+          "title": "Nominee's Information",
+          "fields": [
+            {
+              "type": "text",
+              "label": "Nominee's Name",
+              "required": true,
+              "key": "nominee_name"
+            },
+            {
+              "type": "email",
+              "label": "Nominee's Email",
+              "required": true,
+              "key": "nominee_email"
+            }
+          ]
+        },
+        {
+          "title": "Nomination Details",
+          "fields": [
+            {
+              "type": "select",
+              "label": "Nomination Category",
+              "options": [
+                "Diversity Champion",
+                "Community Impact Award",
+                "Leadership in Legal Education Award",
+                "Trailblazer in Technology Award",
+                "Rising Star Award",
+                "Mentorship Excellence Award",
+                "Innovative Recruitment Award",
+                "Entrepreneurial Excellence Award",
+                "The Nobel Award"
+              ],
+              "required": true,
+              "key": "nomination_category"
+            },
+            {
+              "type": "textarea",
+              "label": "Reason(s) for nominating",
+              "required": true,
+              "key": "reason_for_nominating"
+            },
+            {
+              "type": "url",
+              "label": "Supporting Link",
+              "required": false,
+              "key": "supporting_link"
+            },
+            {
+              "type": "file",
+              "label": "Supporting Document",
+              "required": false,
+              "key": "supporting_document"
+            }
+          ]
+        }
+      ],
+      "submit_button": {
+        "label": "Submit",
+        "action": "submit_form"
+      },
+      "success_message": "Form submitted successfully!"
+    },
+    "actions": [
+      {
+        "action": "submit_form",
+        "method": "POST",
+        "url": "/submit",
+        "params": {
+          "nominator_name": "{nominator_name}",
+          "nominator_telephone": "{nominator_telephone}",
+          "nominator_email": "{nominator_email}",
+          "nominee_name": "{nominee_name}",
+          "nominee_email": "{nominee_email}",
+          "nomination_category": "{nomination_category}",
+          "reason_for_nominating": "{reason_for_nominating}",
+          "supporting_link": "{supporting_link}",
+          "supporting_document": "{supporting_document}"
+        }
+      }
+    ]
+  }
+  

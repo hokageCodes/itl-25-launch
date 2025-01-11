@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState, useEffect } from 'react';
 import hero3 from '../assets/hero3.png';
 import plaque from '../assets/plaque.png';
@@ -96,8 +97,9 @@ const AwardsSection = () => {
 
                 </p>
                 <p className="text-center">
-                We invite ITLs, law firms, and legal professionals across Canada to participate in this prestigious recognition of talent and dedication. Below are the award categories designed to honor outstanding individuals, organizations, and initiatives that have made a significant impact on the Canadian legal landscape.
+                We invite ITLs, law firms, and legal professionals across Canada to participate in this prestigious recognition of talent and dedication. Below are the award categories designed to honor outstanding individuals, organizations, and initiatives that have made a significant impact on the Canadian legal landscape. 
                 </p>
+                <p className='text-center'>Deadline for nominations is January 31, 2025</p>
 
                 {/* Awards Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-5">

@@ -1,5 +1,5 @@
-// context/AuthContext.jsx
-import React, { createContext, useContext, useState, useEffect } from 'react';
+/* eslint-disable react/prop-types */
+import { createContext, useContext, useState, useEffect } from 'react';
 import { auth, db } from '../../firebaseConfig';
 import { signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth';
 import { doc, getDoc } from 'firebase/firestore';

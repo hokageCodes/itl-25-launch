@@ -15,20 +15,20 @@ const AdminAnalytics = () => {
   useEffect(() => {
     const fetchAnalytics = async () => {
       const firestore = getFirestore(app);
-
+    
       try {
-        const registrationQuerySnapshot = await getDocs(collection(firestore, 'preRegistrations'));
+        const registrationQuerySnapshot = await getDocs(collection(firestore, 'registrationsSubmissions')); // Use correct collection name
         const volunteerQuerySnapshot = await getDocs(collection(firestore, 'volunteersSubmissions'));
-        const nominationQuerySnapshot = await getDocs(collection(firestore, 'nominationsSubmissions'));
+        const nominationQuerySnapshot = await getDocs(collection(firestore, 'nominationSubmissions'));
         const sponsorshipQuerySnapshot = await getDocs(collection(firestore, 'sponsors'));
-
+    
         const registrationCount = registrationQuerySnapshot.size;
         const volunteerCount = volunteerQuerySnapshot.size;
         const nominationCount = nominationQuerySnapshot.size;
         const sponsorshipCount = sponsorshipQuerySnapshot.size;
-
+    
         const totalSubmissions = registrationCount + volunteerCount + nominationCount + sponsorshipCount;
-
+    
         setAnalytics({
           totalSubmissions,
           registrationSubmissions: registrationCount,
@@ -39,7 +39,7 @@ const AdminAnalytics = () => {
       } catch (error) {
         console.error('Error fetching analytics:', error);
       }
-    };
+    };    
 
     fetchAnalytics();
   }, []);

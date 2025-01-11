@@ -3,12 +3,13 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import { Navigation, Autoplay } from 'swiper/modules';
-import AboutSection from '../components/about-us/About';
 import PartnersSection from '../components/partners/PartnersSection';
 import hero1 from '/assets/hero1.webp';
 import hero2 from '/assets/conn.png';
 import hero3 from '/assets/hero3.webp';
-import AgendaTable from '../components/Agenda';
+// import AgendaTable from '../components/Agenda';
+import ScheduleTimeline from '../components/schedule-section/Schedule';
+import KennysSection from '../components/Kenny/KennysSection';
 
 export default function ConferencePage() {
 
@@ -42,9 +43,9 @@ export default function ConferencePage() {
             </SwiperSlide>
           </Swiper>
           <main className="mt-12">
-            <AboutSection />
+            <KennysSection />
             <PartnersSection />
-            <AgendaTable />
+            <ScheduleTimeline />
           </main>
         </div>
     </>

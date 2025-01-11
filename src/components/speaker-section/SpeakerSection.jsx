@@ -43,13 +43,14 @@ const SpeakerSection = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl text-textPrimary font-black mb-4">
             Meet Our Keynote Speaker
           </h2>
-          <p className="mb-6 text-lg max-w-[500px]">
-            Watch this space for more details as we unveil the keynote speaker for the ITL Conference 2025
-          </p>
+          <h3 className="text-lg max-w-[500px] font-bold">
+            Hon. Justice Chidinma B. Thompson 
+          </h3>
+          <p>Justice of the Court of King&#39;s Bench, Alberta</p>
           <div>
             <Link
               to="/speakers"
-              className="inline-block bg-wine text-white hover:bg-deepBlue rounded font-bold py-2 px-4 transition-colors duration-300"
+              className="mt-4 inline-block bg-wine text-white hover:bg-deepBlue rounded font-bold py-2 px-4 transition-colors duration-300"
             >
               See All Speakers
             </Link>

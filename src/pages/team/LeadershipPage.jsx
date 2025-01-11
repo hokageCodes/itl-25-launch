@@ -5,7 +5,7 @@ const LeadershipSection = () => {
   const teamMembers = [
     { name: "Kenny Okunola", org: "The ITL Network & Global Lawyers of Canada", img: "/assets/leadership/ken.webp" },
     { name: "Cynthia Okafor", org: "The ITL Network", img: "/assets/leadership/cyn.webp" },
-    { name: "Dayo Ogunyemi", org: "Global Lawyers of Canada", img: "/assets/leadership/dayo.webp" },
+    { name: "Dayo Ogunyemi", org: "Global Lawyers of Canada", img: "/assets/dayoo.webp" },
     { name: "Michael Tam", org: "ITLNCA NetworkS", img: "/assets/leadership/mike.webp" },
     { name: "Ishita Kashyap", org: "Just One Yes (JOY) ITL Initiative", img: "/assets/leadership/ishita.webp" },
     { name: "Funto Omotosho", org: "The ITL Network", img: "/assets/leadership/funto.webp" },

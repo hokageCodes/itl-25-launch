@@ -58,7 +58,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex">
-          <a href="/volunteer" className="py-2 px-8 mr-4 bg-wine text-white hover:bg-deepBlue rounded transition duration-300">Volunteer</a>
+        <a href="/registration" className="bg-[#FEFBF6] hover:bg-ctaBg hover:text-bg text-wine font-bold py-3 px-6 rounded-lg transition-colors duration-300">Register Now</a>
         </div>
 
         <div className="md:hidden">
@@ -93,7 +93,7 @@ const Navbar = () => {
         </div>
         <a href="/faq" className="block py-2 px-4 text-sm font-bold">FAQs</a>
         <a href="/awards" className="block py-2 px-4 text-sm font-bold">Awards</a>
-        <a href="/volunteer" className="block mx-auto my-4 py-2 px-4 w-auto bg-wine text-white hover:bg-deepBlue rounded transition duration-300 text-center">Volunteer</a>
+        <a href="/registration" className="bg-[#FEFBF6] hover:bg-ctaBg hover:text-bg text-wine font-bold py-3 px-6 rounded-lg transition-colors duration-300">Register Now</a>
       </div>
     </nav>
   );
