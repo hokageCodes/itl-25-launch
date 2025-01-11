@@ -90,11 +90,6 @@ const PlanningTeamSection = () => {
       img: "/assets/sara.png",
     },
     {
-      name: "Jennifer Lau",
-      role: "Career Advisor, Graduate Studies Peter Allard School of Law",
-      img: "/assets/jen.png",
-    },
-    {
       name: "Leena Yousefi",
       role: "CEO  YLaw",
       img: "/assets/leena.png",
@@ -115,16 +110,6 @@ const PlanningTeamSection = () => {
       img: "/assets/nketti.png",
     },
     {
-      name: "Sandra Aigbinode Lange",
-      role: "Senior Legal Counsel at AltaLink LP",
-      img: "/assets/sandy.png",
-    },
-    {
-      name: "Wale Balogun",
-      role: "Executive Consultant at IG Wealth Management",
-      img: "/assets/wales.png",
-    },
-    {
       name: "Tomi Olutunfese",
       role: "Founder, Tomi Law Office",
       img: "/assets/tomi.png",
@@ -138,11 +123,6 @@ const PlanningTeamSection = () => {
       name: "Angela Ogang",
       role: "Founder, AngeLAW",
       img: "/assets/angie.webp",
-    },
-    {
-      name: "Dara Omolaja",
-      role: "TD Bank",
-      img: "/assets/daraa.webp",
     },
     {
       name: "Dayo Ogunyemi",
@@ -194,18 +174,38 @@ const PlanningTeamSection = () => {
       role: "Senior Associate, DLA Piper",
       img: "/assets/ishita.webp",
     },
+    {
+      name: "Jennifer Lau",
+      role: "Career Advisor, Graduate Studies Peter Allard School of Law",
+      img: "/assets/jen.png",
+    },
+    {
+      name: "Sandra Aigbinode Lange",
+      role: "Senior Legal Counsel at AltaLink LP",
+      img: "/assets/sandy.png",
+    },
+    {
+      name: "Wale Balogun",
+      role: "Executive Consultant at IG Wealth Management",
+      img: "/assets/wales.png",
+    },
+    {
+      name: "Dara Omolaja",
+      role: "TD Bank",
+      img: "/assets/daraa.webp",
+    },
   ];
-
+  
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true); // Simulating loading state
   const membersPerPage = 12;
-
+  
   const indexOfLastMember = currentPage * membersPerPage;
   const indexOfFirstMember = indexOfLastMember - membersPerPage;
   const currentMembers = teamMembers.slice(indexOfFirstMember, indexOfLastMember);
-
+  
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
+  
   useEffect(() => {
     // Simulate fetching data by using a timeout
     const timer = setTimeout(() => {
